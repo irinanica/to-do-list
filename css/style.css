@@ -1,0 +1,193 @@
+.upperCaseText span {
+    text-transform: uppercase;
+}
+
+#toggleList {
+    float: right;
+}
+
+.listHeader {
+    padding: 5% 5% 0 5%;
+}
+
+.listPage {
+    max-width: 40%;
+    margin: auto;
+    background-color: #30356659;
+    border-radius: 10%;
+    margin-bottom: 5%;
+}
+
+.upButton,  
+.downButton,
+.removeButton {
+    float: right;
+    background: #0e4d8875;
+    color: white;
+    border: none;
+    margin-right: 5px;
+    font-size: 15px;    
+    color: white;
+    border-radius: 25px;
+    display: block;
+}
+
+
+li {
+    list-style-type: none;
+}
+
+.addItem {
+    padding-bottom: 35%;
+}
+
+.addItemInput, 
+.descriptionInput {
+    width: 50%;
+    background-color: #0e4d884b;
+    margin-right: 5%;
+}
+
+.addItemInput {
+    margin-left: 5%;
+    width: 45%;
+    margin-bottom: 5%;
+    margin-top: 5%;
+}
+
+.descriptionInput {
+    margin-top: 7%;
+}
+
+.descrButton {
+    margin-top: 5%;
+}
+
+.removeItemsButton {
+    margin-left: 5%;
+    float: right;
+}
+
+/* Include the padding and border in an element's total width and height */
+* {
+    box-sizing: border-box;
+}
+
+
+p.description {
+    color: white;
+    font-size: 18px;
+    margin: 5% 0;
+}
+
+/* Style the list items */
+ul li {
+    cursor: pointer;
+    position: relative;
+    padding: 12px 10px 12px 40px;
+    background: #303566d2;
+    font-size: 18px;
+    transition: 0.2s;
+    margin-right: 7%;
+
+    
+
+    /* make the list items unselectable */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Set all odd list items to a different color (zebra-stripes) */
+ul li:nth-child(odd) {
+    background: #30356659;
+}
+
+/* Darker background-color on hover */
+ul li:hover {
+    background: #ddd;
+}
+
+/* When clicked on, add a background color and strike out text */
+ul li.checked {
+    background: #303566a6;
+    color: #fff;
+    text-decoration: line-through;
+}
+
+/* Add a "checked" mark when clicked on */
+ul li.checked::before {
+    content: '';
+    position: absolute;
+    border-color: #fff;
+    border-style: solid;
+    border-width: 0 2px 2px 0;
+    top: 10px;
+    left: 16px;
+    transform: rotate(45deg);
+    height: 15px;
+    width: 7px;
+}
+
+/* Style the header */
+.header {
+    padding: 30px 40px;
+    color: white;
+    text-align: center;
+    margin-top: 5%;
+    margin-bottom: 0;
+    background-image: url("./img/any.jpg");
+}
+
+/* Clear floats after the header */
+.header:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Style the input */
+input {
+    margin: 0;
+    border: none;
+    border-radius: 0;
+    width: 75%;
+    padding: 10px;
+    float: left;
+    font-size: 16px;
+}
+
+/* Style the "Add" button */
+.addItemButton {
+    
+    background: rgb(94, 129, 170);
+    color: white;
+    float: left;
+    text-align: center;
+    font-size: 2em;
+    cursor: pointer;
+    border-radius: 100%;
+    border: 0px;
+    margin-right: 5%;
+    font-weight: bold;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 5%;
+    margin-top: 5%;
+}
+
+.addItemButton:hover {
+    background-color: #bbb;
+}
+
+.btnStyle {
+    background: rgb(94, 129, 170);
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 10px;
+    border: 0px;
+    margin-right: 5%;
+    padding: 10px;
+}
