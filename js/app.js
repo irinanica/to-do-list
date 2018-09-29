@@ -7,16 +7,11 @@ const addItemInput = document.querySelector('input.addItemInput');
 const addItemButton = document.querySelector('button.addItemButton');
 const removeItemsButton = document.querySelector('button.removeItemsButton');
 const listUl = listDiv.querySelector('ul');
-const listItem = listUl.children; 
+const listItem = listUl.children;
 const editTitle = document.querySelector('button.editTitleButton');
 const inputEdit = document.querySelector('.inputEdit');
-
 const firstListItem = listUl.firstElementChild;
 const lastListItem = listUl.lastElementChild;
-
-// editTitle.addEventListener('click', () => {
-//     inputEdit.disabled = false;
-// })
 
 
 // up, down and remove list buttons
@@ -46,27 +41,15 @@ listUl.addEventListener('click', (event) => {
             }
         }
     }
-}); 
+});
 
 // Add a "checked" symbol when clicking on a list item
 var list = document.querySelector('ul');
-list.addEventListener('click', function(ev) {
-  if (ev.target.tagName === 'LI') {
-    ev.target.classList.toggle('checked');
-  }
+list.addEventListener('click', function (ev) {
+    if (ev.target.tagName === 'LI') {
+        ev.target.classList.toggle('checked');
+    }
 }, false);
-
-
-//uppercase on hover on li
-// for (let i=0; i<listItem.length; i++) {
-//     listItem[i].addEventListener("mouseover", () => {
-//        listItem[i].classList.add("upperCaseText");
-//     });
-//     listItem[i].addEventListener("mouseout", () => {
-//         listItem[i].classList.remove("upperCaseText");
-//     });
-// }
-
 
 
 // hide & show the list
@@ -84,7 +67,7 @@ toggleList.addEventListener('click', () => {
 // change the description of the list
 descriptionButton.addEventListener('click', () => {
     descriptionP.innerHTML = descriptionInput.value + ':';
-    descriptionInput.value = ''; //autoclear the input
+    descriptionInput.value = '';
 });
 
 
@@ -92,12 +75,12 @@ descriptionButton.addEventListener('click', () => {
 addItemButton.addEventListener('click', () => {
     let ul = document.getElementsByTagName('ul')[0];
     let li = document.createElement('li');
-    let liHTML = '<span>' + addItemInput.value + '</span>' + 
+    let liHTML = '<span>' + addItemInput.value + '</span>' +
         '<button class="removeButton">×</button><button class="downButton">&#129051;</button><button class="upButton">&#129029;</button>';
     li.innerHTML = liHTML;
     ul.appendChild(li);
-    addItemInput.value = ''; //autoclear the input 
-}) 
+    addItemInput.value = '';
+})
 
 
 // remove all items in the list
@@ -105,7 +88,7 @@ removeItemsButton.addEventListener('click', () => {
     let ul = document.getElementsByTagName('ul')[0];
     console.log(ul);
     ul.innerHTML = '';
-}) 
+})
 
 
 
